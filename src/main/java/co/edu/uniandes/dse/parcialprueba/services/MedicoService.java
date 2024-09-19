@@ -20,10 +20,10 @@ public class MedicoService {
         if (registro == null) 
             throw new IllegalOperationException("El registro medico debe iniciar por RM");
         
-        if (registro.length()<10) 
+        if (registro.length()<2) 
             throw new IllegalOperationException("El registro medico debe iniciar por RM");
 
-        if (registro.charAt(0)=='R' && registro.charAt(1)=='M') 
+        if (!registro.startsWith("RM")) 
             throw new IllegalOperationException("El registro medico debe iniciar por RM");
 
         return medicoRepository.save(medico);

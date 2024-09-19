@@ -7,13 +7,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 
 import lombok.Data;
-import uk.co.jemos.podam.common.PodamExclude;
+import uk.co.jemos.podam.common.PodamStringValue;
 
 @Data
 @Entity
-public class EspecialidadEntity {
-
+public class EspecialidadEntity extends BaseEntity{
+    
+    @PodamStringValue(length=10)
     String nombre;
+    @PodamStringValue(length=20)
     String descripcion;
 
     @ManyToMany
