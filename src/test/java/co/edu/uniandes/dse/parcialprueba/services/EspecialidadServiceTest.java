@@ -76,7 +76,7 @@ public class EspecialidadServiceTest {
 	}
 	
 	@Test
-	void testCreateEspecialidadInvalidBirthDate() {
+	void testCreateEspecialidadInvalid() {
 		assertThrows(IllegalOperationException.class, ()->{
 			EspecialidadEntity newEntity = factory.manufacturePojo(EspecialidadEntity.class);
 			newEntity.setDescripcion("Corta");

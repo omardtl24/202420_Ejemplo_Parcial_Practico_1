@@ -78,7 +78,7 @@ public class MedicoServiceTest {
 	}
 	
 	@Test
-	void testCreateMedicoInvalidBirthDate() {
+	void testCreateMedicoInvalid() {
 		assertThrows(IllegalOperationException.class, ()->{
 			MedicoEntity newEntity = factory.manufacturePojo(MedicoEntity.class);
 			newEntity.setRegistroMedico("No es RM valida");
